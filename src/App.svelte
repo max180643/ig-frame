@@ -96,6 +96,7 @@
       const input = e.target as HTMLInputElement;
       const url = URL.createObjectURL(input.files[0]);
       uploadImageSwitcher.switchImage(url);
+      layer.draw();
     };
 
     previewText = (newText) => {
@@ -251,7 +252,7 @@
         />
       </div>
       <div class={tw`my-2`}>
-        Upload Image <br /><input
+        Upload Image (Drag image to resize)<br /><input
           class={tw`text-base mt-1`}
           type="file"
           id="background"
